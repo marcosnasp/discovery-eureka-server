@@ -1,10 +1,10 @@
 spring:
   application:
     name: eureka-service-discovery-server
-  # Habilitando a segurança - eureka-service-discovery-server
-  #security:
-  #  user:  #    name: desenv
-  #    password: desenv
+  security:
+    user:
+      name: desenv
+      password: desenv
 server:
   port:
     ${port:8761}
