@@ -1,6 +1,6 @@
 Comandos a serem executados para dockerização e construção do servidor do eureka:
 
-#Procedimento de Build
+## Procedimentos de Build
 
 ### Para executar sem o docker:
 
