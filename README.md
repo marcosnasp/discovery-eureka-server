@@ -27,3 +27,10 @@ docker login -u marcosnasp
 docker tag marcosnasp/discovery-eureka-server:1.0.0 discovery-eureka-server:1.0.0
 docker push discovery-eureka-server:1.0.0
 ```
+
+### Executar o container:
+
+```
+docker run -it -d --name discovery-eureka-server -p 8761:8761 discovery-eureka-server
+docker container exec -it discovery-eureka-server /bin/sh
+```
