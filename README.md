@@ -14,11 +14,13 @@ Comandos a serem executados para dockerização e construção do servidor do eu
 ./gradlew build docker
 ```
 
-### Executar Container na porta específica:
+### Executar o container na porta específica:
 
 ```
-docker run -p 8761:8761 -t discovery-eureka-server
+docker run -it -d --name discovery-eureka-server -p 8761:8761 discovery-eureka-server
+docker container exec -it discovery-eureka-server /bin/sh
 ```
+
 
 ### Push Images para o docker hub (devemos configurar para usar o da ufma):
 
@@ -28,9 +30,3 @@ docker tag marcosnasp/discovery-eureka-server:1.0.0 discovery-eureka-server:1.0.
 docker push discovery-eureka-server:1.0.0
 ```
 
-### Executar o container:
-
-```
-docker run -it -d --name discovery-eureka-server -p 8761:8761 discovery-eureka-server
-docker container exec -it discovery-eureka-server /bin/sh
-```
